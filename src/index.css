@@ -1,7 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Slider transitions */
+.slide-enter {
+  transform: translateX(100%);
+}
+.slide-active {
+  transform: translateX(0%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.slide-exit {
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Product card hover effect */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image zoom on hover */
+.product-img-wrapper {
+  overflow: hidden;
+}
+.product-img-wrapper img {
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Badge pulse */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.badge-discount {
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+/* Button ripple */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0px);
+}
+
+/* Dot indicator */
+.dot-indicator {
+  transition: all 0.3s ease;
 }
