@@ -1,5 +1,5 @@
 #!/bin/bash
-# Start script untuk basic-marketplace-front-end
+# Start script untuk marketplace-front-end-web
 # Jalankan: bash start.sh
 
 echo "🚀 Starting Basic Marketplace Front-End..."
@@ -14,7 +14,7 @@ else
 fi
 
 echo ""
-echo "🌐 Dev server berjalan di: http://localhost:5173/basic-marketplace-front-end/"
+echo "🌐 Dev server berjalan di: http://localhost:5173/marketplace-front-end-web/"
 echo "   (Tekan Ctrl+C untuk stop)"
 echo ""
 

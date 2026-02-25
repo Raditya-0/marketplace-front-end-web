@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ function Login() {
                   <label className="block text-xs font-semibold text-slate-600 uppercase tracking-wide">
                     Password
                   </label>
-                  <a href="#" className="text-xs text-indigo-600 hover:underline font-medium">Forgot password?</a>
+                  <Link to="/forgot-password" className="text-xs text-indigo-600 hover:underline font-medium">Forgot password?</Link>
                 </div>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -73,7 +73,7 @@ function Login() {
             <div className="mt-6 text-center">
               <p className="text-xs text-slate-500">
                 Don't have an account?{' '}
-                <a href="#" className="text-indigo-600 font-semibold hover:underline">Create account</a>
+                <Link to="/signup" className="text-indigo-600 font-semibold hover:underline">Create account</Link>
               </p>
             </div>
           </div>
