@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+
 import productImage_A from '../assets/images_A.jpg';
 import productImage_B from '../assets/images_B.jpg';
 import productImage_C from '../assets/images_C.jpg';
@@ -9,9 +10,9 @@ import productImage_F from '../assets/images_F.jpg';
 import productImage_G from '../assets/images_G.jpg';
 
 const featuredProducts = [
-  { id: 1, name: 'PC All-in-One', subtitle: 'All-in-one powerhouse for everyday use', tag: 'Best Seller', image: productImage_A },
-  { id: 2, name: 'Paket Full Set PC', subtitle: 'Complete desktop setup — plug and play', tag: 'Bundle Deal', image: productImage_B },
-  { id: 3, name: 'Laptop HP', subtitle: 'Thin, light, and blazing fast', tag: 'Limited Stock', image: productImage_C },
+  { id: 5, name: 'PC All-in-One', subtitle: 'All-in-one powerhouse for everyday use', tag: 'Best Seller', image: productImage_A },
+  { id: 6, name: 'Paket Full Set PC', subtitle: 'Complete desktop setup — plug and play', tag: 'Bundle Deal', image: productImage_B },
+  { id: 7, name: 'Laptop HP', subtitle: 'Thin, light, and blazing fast', tag: 'Limited Stock', image: productImage_C },
 ];
 
 const allProducts = [
@@ -19,9 +20,12 @@ const allProducts = [
   { id: 2, name: 'MSI MPG X670E', price: 850, originalPrice: 920, category: 'Motherboard', image: productImage_E },
   { id: 3, name: 'Adata DDR5 38400', price: 30, originalPrice: null, category: 'RAM', image: productImage_F },
   { id: 4, name: 'Intel Core i9-14900KS', price: 740, originalPrice: 799, category: 'CPU', image: productImage_G },
+  { id: 5, name: 'PC All-in-One', price: 1299, originalPrice: 1499, category: 'PC', image: productImage_A },
+  { id: 6, name: 'Paket Full Set PC', price: 2499, originalPrice: 2799, category: 'PC', image: productImage_B },
+  { id: 7, name: 'Laptop HP', price: 899, originalPrice: 999, category: 'Laptop', image: productImage_C },
 ];
 
-const categories = ['All', 'GPU', 'CPU', 'Motherboard', 'RAM'];
+const categories = ['All', 'GPU', 'CPU', 'Motherboard', 'RAM', 'PC', 'Laptop'];
 
 function Marketplace() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -141,7 +145,7 @@ function Marketplace() {
       </div>
 
       {/* ─── Product Grid ─────────────────────────────────────── */}
-      <div className="flex items-center justify-between mb-4">
+      <div id="products" className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold text-slate-800">All Products</h2>
         {/* Category filter */}
         <div className="flex gap-2 flex-wrap">
@@ -150,8 +154,8 @@ function Marketplace() {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`text-xs font-semibold px-3 py-1.5 rounded-full border transition-all duration-150 ${selectedCategory === cat
-                  ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
-                  : 'bg-white text-slate-600 border-slate-300 hover:border-indigo-400 hover:text-indigo-600'
+                ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                : 'bg-white text-slate-600 border-slate-300 hover:border-indigo-400 hover:text-indigo-600'
                 }`}
             >
               {cat}

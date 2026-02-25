@@ -1,5 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import productImage_A from '../assets/images_A.jpg';
+import productImage_B from '../assets/images_B.jpg';
+import productImage_C from '../assets/images_C.jpg';
 import productImage_D from '../assets/images_D.jpg';
 import productImage_E from '../assets/images_E.jpg';
 import productImage_F from '../assets/images_F.jpg';
@@ -10,6 +13,9 @@ const products = [
   { id: 2, name: 'MSI MPG X670E', price: 850, originalPrice: 920, category: 'Motherboard', description: 'The MSI MPG X670E Carbon WiFi is a premium AM5 motherboard supporting AMD Ryzen 7000 series CPUs. Features PCIe 5.0, DDR5, and advanced thermal design for enthusiast builders.', rating: 4.7, reviews: 872, image: productImage_E },
   { id: 3, name: 'Adata DDR5 38400', price: 30, originalPrice: null, category: 'RAM', description: 'High-performance DDR5 memory running at 4800MHz (PC5-38400). Ultra-low latency and superior bandwidth ideal for gaming and productivity workloads. Backward compatible with XMP 3.0.', rating: 4.5, reviews: 414, image: productImage_F },
   { id: 4, name: 'Intel Core i9-14900KS', price: 740, originalPrice: 799, category: 'CPU', description: 'Intel\'s flagship 14th-gen desktop processor with 24 cores (8P+16E) and a boost clock up to 6.2GHz. Exceptional multi-threaded performance for gaming, streaming, and content creation.', rating: 4.8, reviews: 1105, image: productImage_G },
+  { id: 5, name: 'PC All-in-One', price: 1299, originalPrice: 1499, category: 'PC', description: 'A powerful all-in-one desktop PC with a sleek design. Ideal for home and office use with a large display, fast processor, and ample storage — no cables clutter your desk.', rating: 4.6, reviews: 638, image: productImage_A },
+  { id: 6, name: 'Paket Full Set PC', price: 2499, originalPrice: 2799, category: 'PC', description: 'Complete desktop bundle including tower, monitor, keyboard, and mouse. Everything you need out of the box — perfect for gaming, streaming, or productivity.', rating: 4.8, reviews: 312, image: productImage_B },
+  { id: 7, name: 'Laptop HP', price: 899, originalPrice: 999, category: 'Laptop', description: 'A slim and lightweight HP laptop featuring a fast Intel processor, Full HD display, and all-day battery life. Perfect for students, professionals, and everyday tasks on the go.', rating: 4.5, reviews: 921, image: productImage_C },
 ];
 
 function StarRating({ rating }) {
