@@ -6,7 +6,7 @@ Aplikasi web marketplace sederhana yang dibangun menggunakan React, Vite, dan Ta
 
 - **Halaman Utama dengan Daftar Produk**: Menampilkan produk dalam format grid.
 - **Slider Produk Unggulan**: Banner dengan fitur auto-slide untuk produk diskon atau unggulan.
-- **Bilah Pencarian**: Pengguna dapat mencari produk berdasarkan nama dengan rekomendasi produk yang dapat diklik.
+- **Pencarian**: Pengguna dapat mencari produk berdasarkan nama dengan rekomendasi produk yang dapat diklik.
 - **Halaman Detail Produk**: Menampilkan informasi lengkap tentang tiap produk.
 - **Halaman Login**: Form login sederhana (hanya untuk demonstrasi, tanpa fungsi autentikasi).
 
@@ -16,7 +16,7 @@ Aplikasi web marketplace sederhana yang dibangun menggunakan React, Vite, dan Ta
 project-root/
 ├── src/
 │   ├── components/
-│   │   └── SearchBar.jsx         # Komponen bilah pencarian dengan rekomendasi
+│   │   └── SearchBar.jsx         # Komponen pencarian dengan rekomendasi
 │   ├── pages/
 │   │   └── Login.jsx             # Halaman login
 │   │   └── Marketplace.jsx       # Halaman utama dengan slider dan daftar produk
@@ -43,7 +43,7 @@ project-root/
 
 3. Jalankan server pengembangan:
    ```bash
-   npm run dev
+   bash start.sh
    ```
 
 4. Buka aplikasi di browser pada `http://localhost:3000`.
