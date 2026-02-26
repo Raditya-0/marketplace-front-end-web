@@ -1,4 +1,4 @@
-# Proyek Marketplace
+# Project Marketplace
 
 Aplikasi web marketplace sederhana yang dibangun menggunakan React, Vite, dan Tailwind CSS. Aplikasi ini memiliki halaman utama yang menampilkan daftar produk, slider produk unggulan, halaman login, bilah pencarian dengan rekomendasi produk, serta halaman detail untuk tiap produk.
 
@@ -10,7 +10,7 @@ Aplikasi web marketplace sederhana yang dibangun menggunakan React, Vite, dan Ta
 - **Halaman Detail Produk**: Menampilkan informasi lengkap tentang tiap produk.
 - **Halaman Login**: Form login sederhana (hanya untuk demonstrasi, tanpa fungsi autentikasi).
 
-## Struktur Proyek
+## Struktur Project
 
 ```
 project-root/
